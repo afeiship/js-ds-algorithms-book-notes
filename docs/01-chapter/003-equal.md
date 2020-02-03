@@ -36,3 +36,20 @@ undefined null true
 
 ## 浏览器里支持的选项
 chrome://flags
+
+
+## 这里的隐式转化可以这样理解
+```js
+// Symbol.toPrimitive 是一个预定义的 Symbol值
+const object1 = {
+  [Symbol.toPrimitive](hint) {
+    if (hint == 'number') {
+      return 42;
+    }
+    return null;
+  }
+};
+
+console.log(+object1);
+// expected output: 42
+```
