@@ -1,3 +1,11 @@
+# priority queue
+
+## 定义
+元素的添加和移除是基于优先级的。一个现实的例子就是机
+场登机的顺序。头等舱和商务舱乘客的优先级要高于经济舱乘客。
+
+
+```js
 function PriorityQueue() {
   let items = [];
   function QueueElement(element, priority) {
@@ -28,3 +36,4 @@ function PriorityQueue() {
   };
   //其他方法和默认的Queue实现相同
 }
+```
